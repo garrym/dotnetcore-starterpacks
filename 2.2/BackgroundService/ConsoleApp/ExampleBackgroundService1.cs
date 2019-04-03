@@ -1,23 +1,22 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Hosting;
 
-namespace StarterPacks.HostedService
+namespace StarterPacks.BackgroundService
 {
-    public class ExampleBackgroundService : BackgroundService
+    public class ExampleBackgroundService1 : Microsoft.Extensions.Hosting.BackgroundService
     {
         protected override async Task ExecuteAsync(CancellationToken cancellationToken)
         {
-            Console.WriteLine("ExampleBackgroundService executing");
+            Console.WriteLine("ExampleBackgroundService1 executing");
 
             while (!cancellationToken.IsCancellationRequested)
             {
-                Console.WriteLine("ExampleBackgroundService running");
+                Console.WriteLine("ExampleBackgroundService1 running");
                 await Task.Delay(TimeSpan.FromSeconds(1), cancellationToken);
             }
 
-            Console.WriteLine("ExampleBackgroundService exiting");
+            Console.WriteLine("ExampleBackgroundService1 exiting");
         }
     }
 }
