@@ -8,7 +8,7 @@ namespace StarterPacks.DependencyInjection
         static void Main()
         {
             var serviceCollection = new ServiceCollection()
-                .AddTransient<IExampleDependency, ExampleDependencyInstance>()
+                .AddTransient<IExampleDependency, ExampleDependencyImplementation>()
                 .AddTransient<Application>();
  
             var serviceProvider = serviceCollection.BuildServiceProvider();
