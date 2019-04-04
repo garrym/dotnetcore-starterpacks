@@ -11,8 +11,8 @@ namespace StarterPacks.BackgroundService
             var hostBuilder = new HostBuilder()
                 .ConfigureServices((hostContext, services) =>
                 {
-                    services.AddHostedService<ExampleBackgroundService1>();
-                    services.AddHostedService<ExampleBackgroundService2>();
+                    services.AddHostedService<ExampleBackgroundService>();
+                    services.AddHostedService<ExampleHostedService>();
                 });
 
             await hostBuilder.RunConsoleAsync();
