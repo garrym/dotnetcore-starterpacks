@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace StarterPacks.DependencyInjection
+namespace StarterPacks.DependencyInjection.Basic
 {
     class Program
     {

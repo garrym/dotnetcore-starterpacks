@@ -1,4 +1,4 @@
-﻿namespace StarterPacks.DependencyInjection
+﻿namespace StarterPacks.DependencyInjection.Basic
 {
     public class Application
     {
