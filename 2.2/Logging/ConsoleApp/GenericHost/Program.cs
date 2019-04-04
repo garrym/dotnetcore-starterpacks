@@ -23,9 +23,10 @@ namespace StarterPacks.Logging.GenericHost
                     serviceCollection.AddHostedService<ExampleLoggingBackgroundService>();
                 });
 
-            var host = hostBuilder.Build();
-
-            await host.RunAsync();
+            using (var host = hostBuilder.Build())
+            {
+                await host.RunAsync();
+            }
         }
     }
 }

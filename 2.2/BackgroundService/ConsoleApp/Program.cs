@@ -15,7 +15,10 @@ namespace StarterPacks.BackgroundService
                     services.AddHostedService<ExampleHostedService>();
                 });
 
-            await hostBuilder.RunConsoleAsync();
+            using (var host = hostBuilder.Build())
+            {
+                await host.RunAsync();
+            }
         }
     }
 }

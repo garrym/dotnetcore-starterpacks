@@ -15,8 +15,10 @@ namespace StarterPacks.DependencyInjection.GenericHost
                         serviceCollection.AddSingleton<IHostedService, ExampleHostedService>();
                     });
 
-            var host = hostBuilder.Build();
-            await host.RunAsync();
+            using (var host = hostBuilder.Build())
+            { 
+                await host.RunAsync();
+            }
         }
     }
 }
