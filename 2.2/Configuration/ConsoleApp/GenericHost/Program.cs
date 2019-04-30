@@ -33,7 +33,4 @@ namespace StarterPacks.Configuration.GenericHost
             }
         }
     }
-
-    public class AppSettings
-    { }
 }
