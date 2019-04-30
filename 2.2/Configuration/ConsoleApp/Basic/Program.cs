@@ -18,7 +18,8 @@ namespace StarterPacks.Configuration.Basic
             var appSettings = new AppSettings();
             configuration.Bind(appSettings);
 
-            Console.WriteLine("Reading from configuration: " + appSettings.Hello + " - " + appSettings.NestedSettings.Value1 + " - " + appSettings.NestedSettings.Value2);
+            Console.WriteLine($"AppSettings.Key1: {appSettings.Key1}");
+            Console.WriteLine($"AppSettings.Object1.Key2: {appSettings.Object1.Key2}");
             Console.ReadKey();
         }
     }

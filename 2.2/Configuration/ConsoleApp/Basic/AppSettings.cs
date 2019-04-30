@@ -1,15 +1,16 @@
-﻿namespace StarterPacks.Configuration.Basic
+﻿using System.Dynamic;
+
+namespace StarterPacks.Configuration.Basic
 {
     public class AppSettings
     {
-        public string Hello { get; set; }
+        public string Key1 { get; set; }
 
-        public NestedSettings NestedSettings { get; set; }
+        public Object1 Object1 { get; set; }
     }
 
-    public class NestedSettings
+    public class Object1
     {
-        public string Value1 { get; set; }
-        public int Value2 { get; set; }
+        public string Key2 { get; set; }
     }
 }
