@@ -17,12 +17,12 @@ namespace StarterPacks.Configuration.GenericHost
 
         protected override async Task ExecuteAsync(CancellationToken cancellationToken)
         {
-            var configurationSection = _configuration.GetSection("exampleKey");
+            var configurationSection = _configuration.GetSection("Key1");
             var value = configurationSection.Value;
 
             while (!cancellationToken.IsCancellationRequested)
             {
-                Console.WriteLine($"Configuration: exampleKey = {value}");
+                Console.WriteLine($"Configuration: Key1 = {value}");
                 await Task.Delay(TimeSpan.FromSeconds(1), cancellationToken);
             }
         }
